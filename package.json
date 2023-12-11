@@ -1,0 +1,12 @@
+{
+  "name": "Design-Pattern-With-TS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Curis-lab/Design-Pattern-With-TS.git",
+  "author": "Boris <72118807+Curis-lab@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
