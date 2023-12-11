@@ -47,5 +47,15 @@ class Duck {
 
 const OBJECT_RETURN = new Duck();
 
-console.log(OBJECT_RETURN.fly(NoneFly).method());
-console.log(OBJECT_RETURN.display(Phone).showOn());
+const rubberDuck = {
+    fly: OBJECT_RETURN.fly(NoneFly).method(),
+    show: OBJECT_RETURN.display(Phone).showOn()
+}
+
+const mountainDuck = {
+    fly: OBJECT_RETURN.fly(JetFly).method(),
+    show: OBJECT_RETURN.display(Tablet).showOn()
+}
+
+console.log('rubberDuck', rubberDuck);
+console.log('mountainDuck', mountainDuck);
