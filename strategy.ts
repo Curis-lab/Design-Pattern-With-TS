@@ -36,7 +36,10 @@ class Phone implements IDisplay {
 interface IDisplayStyle {
   new (): IDisplay;
 }
-class Duck {
+interface IDuck{
+  fly(fly: IFlyStyle): void
+}
+class Duck implements IDuck{
   fly(flyStyle: IFlyStyle) {
     return new flyStyle();
   }
