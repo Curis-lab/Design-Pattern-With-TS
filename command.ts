@@ -1,6 +1,7 @@
 interface ICommand {
   execute(): void;
 }
+
 class Involker {
   on: ICommand;
   constructor(on: ICommand) {
@@ -10,6 +11,7 @@ class Involker {
     this.on.execute();
   }
 }
+
 class TurnOfLight implements ICommand {
   #receiver: Light;
   constructor(receiver: Light) {
@@ -22,6 +24,7 @@ class TurnOfLight implements ICommand {
     this.#receiver.runCommand2();
   }
 }
+
 class DimLight implements ICommand {
   #receiver: Light;
   constructor(receiver: Light) {
@@ -34,6 +37,7 @@ class DimLight implements ICommand {
     this.#receiver.runCommand2();
   }
 }
+
 class Light {
   runCommand1(): void {
     console.log("Execute command 1");
@@ -45,5 +49,6 @@ class Light {
 
 const turn_of_light = new Involker(new TurnOfLight(new Light()));
 const dim_light = new Involker(new DimLight(new Light()));
+
 turn_of_light.execute();
 dim_light.execute();
