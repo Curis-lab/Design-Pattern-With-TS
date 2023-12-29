@@ -38,6 +38,7 @@ interface IDisplayStyle {
 }
 interface IDuck{
   fly(fly: IFlyStyle): void
+  display(displayStyle: IDisplayStyle):void
 }
 class Duck implements IDuck{
   fly(flyStyle: IFlyStyle) {
